@@ -8,37 +8,33 @@
 
 <form id='testForm' novalidate>
   <label for='emailInput'>
-    <span>Email</span>
+    <span>Email</span><span class='redDot'>*</span>
     <input id='emailInput' type='email' required minlength='7'>
     <span class='error'></span>
   </label>
   <label for='zipInput'>
-    <span>US Zip Code</span>
+    <span>US Zip Code</span><span class='redDot'>*</span>
     <input id='zipInput' type="text" pattern="[0-9]{5}" maxlength='5' required>
     <span class='error'></span>
   </label>
   <label for='passwordInput'>
-    <span>Password</span>
+    <span>Password</span><span class='redDot'>*</span>
     <input id='passwordInput' type='password' maxlength='20' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-    <span class='error PassActive'>
+    <span class='passError'>
       <h3>Password must contain the following:</h3>
-      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-      <p id="number" class="invalid">A <b>number</b></p>
-      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      <p id="letter" class="passInvalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="passInvalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="passInvalid">A <b>number</b></p>
+      <p id="passLength" class="passInvalid">Minimum <b>8 characters</b></p>
     </span>
   </label>
   <label for='passwordConfirmInput'>
-    <span>Confirm Password</span>
+    <span>Confirm Password</span><span class='redDot'>*</span>
     <input id='passwordConfirmInput' type='password' maxlength='20' required>
     <span class='error'></span>
   </label>
   <button type='submit'>Submit</button>
 </form>
-
-
-
-
 
 <script src ='./index.js'></script>
 </body> 

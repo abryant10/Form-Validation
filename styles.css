@@ -1,32 +1,51 @@
 form {
   display: flex;
   flex-direction: column;
+  max-width: 400px;
 }
-
+.redDot {
+  color: red;
+}
 .error {
   width  : 100%;
   padding: 0;
-
   font-size: 80%;
   color: white;
   background-color: #900;
   border-radius: 0 0 5px 5px;
-
   box-sizing: border-box;
 }
-
 .error.active {
   padding: 0.3em;
 }
-
-.error.PassActive {
+.passError {
   width  : 100%;
   padding: 0;
-
+  display: none;
   font-size: 80%;
-  color: rgb(0, 0, 0);
-  background-color: #900;
   border-radius: 0 0 5px 5px;
-
   box-sizing: border-box;
+}
+.passError.passActive {
+  width  : 100%;
+  padding: 0.3em;
+  display: block;
+  font-size: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+.passValid {
+ color: green;
+}
+.passValid:before {
+  position: relative;
+  content: "✔";
+}
+.passInvalid {
+  color: red;
+}
+.passInvalid:before {
+  position: relative;
+  content: "✖";
 }
